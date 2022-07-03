@@ -22,19 +22,87 @@ List<CarouselItemModel> carouselItems = List.generate(
             SizedBox(
               height: 18,
             ),
+            // Text(
+            //   'Hey, I\'m', //Hey, I\'m Soliman\na self-taught designer/illustrator & flutter developer
+            //   style: GoogleFonts.oswald(
+            //       color: Colors.black,
+            //       fontWeight: FontWeight.w900,
+            //       fontSize: 40,
+            //       height: 1.3),
+            // ),
+            RichText(
+              text: TextSpan(children: [
+                TextSpan(
+                  text:
+                      'Hey, I\'m', //Hey, I\'m Soliman\na self-taught designer/illustrator & flutter developer
+                  style: GoogleFonts.oswald(
+                      color: Colors.black,
+                      fontWeight: FontWeight.w900,
+                      fontSize: 45,
+                      height: 1.3,
+                      letterSpacing: 1.2),
+                ),
+                TextSpan(
+                  text:
+                      ' Soliman', //Hey, I\'m Soliman\na self-taught designer/illustrator & flutter developer
+                  style: GoogleFonts.oswald(
+                      color: kDangerColor,
+                      fontWeight: FontWeight.w900,
+                      fontSize: 45,
+                      height: 1.3,
+                      letterSpacing: 1.2),
+                ),
+              ]),
+            ),
+            RichText(
+              text: TextSpan(children: [
+                TextSpan(
+                  text:
+                      'a', //Hey, I\'m Soliman\na self-taught designer/illustrator & flutter developer
+                  style: GoogleFonts.oswald(
+                      color: Colors.black,
+                      fontWeight: FontWeight.w900,
+                      fontSize: 25,
+                      height: 1.3),
+                ),
+                TextSpan(
+                  text:
+                      ' self-taught', //Hey, I\'m Soliman\na self-taught designer/illustrator & flutter developer
+                  style: GoogleFonts.oswald(
+                      color: kDangerColor,
+                      fontWeight: FontWeight.w900,
+                      fontSize: 25,
+                      height: 1.3),
+                ),
+                TextSpan(
+                  text:
+                      ' flutter developer', //Hey, I\'m Soliman\na self-taught designer/illustrator & flutter developer
+                  style: GoogleFonts.oswald(
+                      color: Colors.black,
+                      fontWeight: FontWeight.w900,
+                      fontSize: 25,
+                      height: 1.3),
+                ),
+              ]),
+            ),
             Text(
-              'Mohamed\nSoliman',
+              '& designer/illustrator.', //Hey, I\'m Soliman\na self-taught designer/illustrator & flutter developer
               style: GoogleFonts.oswald(
-                  color: kDangerColor,
+                  color: Colors.black,
                   fontWeight: FontWeight.w900,
-                  fontSize: 40,
+                  fontSize: 25,
                   height: 1.3),
             ),
             SizedBox(
               height: 10,
             ),
             Text(
-              'High level experience in app design and development knowledge, producing quality work',
+              'High level experience in app design and development',
+              style: GoogleFonts.oswald(
+                  color: kCaptionColor, height: 1.0, fontSize: 18),
+            ),
+            Text(
+              'knowledge, producing quality work',
               style: GoogleFonts.oswald(
                   color: kCaptionColor, height: 1.0, fontSize: 18),
             ),
@@ -51,19 +119,22 @@ List<CarouselItemModel> carouselItems = List.generate(
               cursor: SystemMouseCursors.click,
               child: Container(
                 decoration: BoxDecoration(
-                  color: kPrimaryColor1,
+                  color: kDangerColor,
                   borderRadius: BorderRadius.circular(8),
                 ),
                 height: 48,
                 padding: EdgeInsets.symmetric(horizontal: 28),
                 child: TextButton(
                   onPressed: null,
-                  child: Text(
-                    'CONTACT ME',
-                    style: TextStyle(
-                        color: Colors.white,
-                        fontSize: 13,
-                        fontWeight: FontWeight.bold),
+                  child: MouseRegion(
+                    cursor: SystemMouseCursors.click,
+                    child: Text(
+                      'See my work',
+                      style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 13,
+                          fontWeight: FontWeight.bold),
+                    ),
                   ),
                 ),
               ),
@@ -73,7 +144,7 @@ List<CarouselItemModel> carouselItems = List.generate(
       ),
       image: Container(
         child: Image.asset(
-          'images/2.png',
+          'images/4.png',
           fit: BoxFit.contain,
         ),
       )),
